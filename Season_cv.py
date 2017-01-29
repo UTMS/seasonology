@@ -11,7 +11,7 @@ Lenin = 2
 # define three main types of strategy
 
 STable = zeros([3,3])
-#ture table between strategies. the first one is the one who acts
+#payoff matrix between strategies. the first one is the one who acts
 # 1 is Cooperation, 0 is non-cooperation
 
 HP = zeros([3,300])
@@ -20,7 +20,7 @@ HP[:,0] = [0.5,0.5,0.5]
 def flat(n):
     result = 1 - math.exp(-n)
     return result
-# sigmoid function
+# flat function
 
 def antiflat(n):
     if n < 1:
@@ -28,7 +28,7 @@ def antiflat(n):
     else:
         result = 10000
     return result
-# antisigmoid function
+# anti-flat function
 
 def Gam(T1,T2):
     if T1 == 0 and T2 == 0:
